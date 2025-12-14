@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meghedi Vartanian — Food, Brain & Decisions</title>
+    
+    <!-- SEO META TAGS -->
+    <meta name="description" content="Personal website of Meghedi Vartanian, Doctoral Candidate in Cognitive Neuroscience.">
+    <meta name="keywords" content="Meghedi Vartanian, cognitive neuroscience, researcher, gut-brain, psychology, github">
+    <meta name="author" content="Meghedi Vartanian">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<!-- ========================================================= -->
+<!-- HERO / INTRO -->
+<!-- ========================================================= -->
+<section class="section hero reveal"
+    style="
+        --bg: radial-gradient(circle at top, #a855f7, #020617);
+        --text: #f8fafc;
+        --accent: #f472b6;
+        --h-size: 4.2rem;
+        --p-size: 1.35rem;
+    ">
+
+    <div class="content center">
+
+        <!-- PROFILE PHOTO -->
+        <img
+            src="assets/images/photos/MPI_4467.JPG"
+            alt="Meghedi Vartanian portrait"
+            class="profile-photo"
+            style="width: 220px; height: 220px;"
+        >
+
+        <h1>Meghedi Vartanian</h1>
+
+        <p class="lead">
+            Doctoral Candidate, Cognitive Neuroscience<br>
+            Leipzig, Germany
+        </p>
+
+    </div>
+
+    <div class="scroll-hint">scroll ↓</div>
+</section>
+<!-- ========================================================= -->
+<!-- ABOUT / STORY -->
+<!-- ========================================================= -->
+<section class="section reveal"
+    style="
+        --bg: #11192b;
+        --text: #e5e7eb;
+        --accent: #38bdf8;
+        --h-size: 3rem;
+        --p-size: 1.15rem;
+        padding: 4rem 2rem;
+    ">
+    <div class="content narrow" style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; margin-bottom: 3rem;">What I Enjoy the Most?</h2>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem;">
+
+            <!-- Left Image -->
+            <div style="flex: 1; min-width: 250px; text-align: center;">
+                <img src="assets/images/photos/Food.jpg"
+                     alt="food decision making"
+                     style="
+                         width: 100%;
+                         max-width: 300px;
+                         border-radius: 12px;
+                         box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+                         transition: transform 0.3s ease;
+                     "
+                     onmouseover="this.style.transform='scale(1.05)'"
+                     onmouseout="this.style.transform='scale(1)'"
+                >
+            </div>
+
+            <!-- Text Section (center) -->
+            <div style="flex: 2; min-width: 250px; text-align: center;">
+                <p>
+                    I'm interested in how the brain regulates food-related decisions and its role in obesity. 
+                    I study how lifestyle and dietary interventions might influence food choices and the gut-brain axis, aiming to inform strategies for healthier weight management.
+                </p>
+
+                <p>
+                    My work bridges <strong>cognitive neuroscience</strong> and
+                    <strong>clinical psychology</strong>, combining experimental and clinical perspectives.
+                </p>
+            </div>
+
+            <!-- Right Image -->
+            <div style="flex: 1; min-width: 250px; text-align: center;">
+                <img src="assets/images/photos/Brain.jpg"
+                     alt="Brain"
+                     style="
+                         width: 100%;
+                         max-width: 300px;
+                         border-radius: 12px;
+                         box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+                         transition: transform 0.3s ease;
+                     "
+                     onmouseover="this.style.transform='scale(1.05)'"
+                     onmouseout="this.style.transform='scale(1)'"
+                >
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========================================================= -->
+<!-- SLIDESHOW SECTION -->
+<!-- ========================================================= -->
+<section class="section reveal slideshow-section"
+    style="
+        --bg: #1c1c2e;
+        --text: #f0f0f0;
+        --accent: #fbbf24;
+        --h-size: 3rem;
+        --p-size: 1.15rem;
+    ">
+
+    <div class="slideshow-container">
+        <img src="assets/images/photos/Slide1.jpg" class="slide-image" alt="Slide 1">
+        <img src="assets/images/photos/Slide2.jpg" class="slide-image" alt="Slide 2">
+        <img src="assets/images/photos/Slide3.jpg" class="slide-image" alt="Slide 3">
+    </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================================= -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // ===== Reveal on scroll =====
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+        for (const reveal of reveals) {
+            const top = reveal.getBoundingClientRect().top;
+            const height = window.innerHeight;
+            if(top < height - 100) reveal.classList.add('active');
+        }
+    });
+
+    // ===== Slideshow =====
+    const slides = document.querySelectorAll('.slide-image');
+    let current = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+    }
+
+    if(slides.length > 0){
+        showSlide(current); // show first slide immediately
+        setInterval(() => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }, 3000);
+    }
+});
+</script>
+
+
+
+
+<!-- ========================================================= -->
+<!-- RESEARCH AREAS (VISUAL BLOCKS WITH IMAGES) -->
+<!-- ========================================================= -->
+
+<section class="section reveal"
+    style="
+        --bg: linear-gradient(135deg, #7c3aed, #ec4899);
+        --text: #ffffff;
+        --accent: #fde68a;
+        --h-size: 3rem;
+        --p-size: 1.05rem;
+        padding: 5rem 2rem;
+    ">
+
+    <div class="content" style="text-align: center; max-width: 1100px; margin: auto;">
+        <h2 style="margin-bottom: 3.5rem;">Research Themes</h2>
+
+        <div class="grid" style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2.5rem;
+        ">
+
+            <!-- Food & Obesity -->
+            <div class="card" style="
+                position: relative;
+                background: rgba(255,255,255,0.12);
+                padding: 2.2rem 2rem;
+                border-radius: 24px;
+                flex: 1 1 300px;
+                max-width: 320px;
+                text-align: center;
+                backdrop-filter: blur(4px);
+            ">
+                <div style="position: relative; margin-bottom: 1.2rem;">
+                    <img src="assets/images/photos/Obesity.jpg"
+                         alt="Food & Obesity"
+                         style="
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            border: 4px solid var(--accent);
+                         ">
+                    <svg style="
+                        position: absolute;
+                        top: -10px;
+                        left: -10px;
+                        width: 120px;
+                        height: 120px;
+                    " viewBox="0 0 120 120">
+                        <path d="M10,60 Q60,10 110,60 Q60,110 10,60"
+                              stroke="var(--accent)"
+                              stroke-width="2"
+                              fill="none"/>
+                    </svg>
+                </div>
+
+                <h3 style="color: var(--accent); margin-bottom: 0.8rem;">
+                    Food & Obesity
+                </h3>
+
+                <p style="color: rgba(255,255,255,0.9);">
+                    Neural and behavioral mechanisms of eating, weight regulation,
+                    cue reactivity, and microbiome–brain interactions.
+                </p>
+            </div>
+
+            <!-- Cognitive Rehabilitation -->
+            <div class="card" style="
+                position: relative;
+                background: rgba(255,255,255,0.12);
+                padding: 2.2rem 2rem;
+                border-radius: 24px;
+                flex: 1 1 300px;
+                max-width: 320px;
+                text-align: center;
+                backdrop-filter: blur(4px);
+            ">
+                <div style="position: relative; margin-bottom: 1.2rem;">
+                    <img src="assets/images/photos/Cognition.jpg"
+                         alt="Cognitive Rehabilitation"
+                         style="
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            border: 4px solid var(--accent);
+                         ">
+                    <svg style="
+                        position: absolute;
+                        top: -10px;
+                        left: -10px;
+                        width: 120px;
+                        height: 120px;
+                    " viewBox="0 0 120 120">
+                        <path d="M10,60 Q60,10 110,60 Q60,110 10,60"
+                              stroke="var(--accent)"
+                              stroke-width="2"
+                              fill="none"/>
+                    </svg>
+                </div>
+
+                <h3 style="color: var(--accent); margin-bottom: 0.8rem;">
+                    Cognitive Rehabilitation
+                </h3>
+
+                <p style="color: rgba(255,255,255,0.9);">
+                    Cognitive screening and targeted training for attention,
+                    memory, and problem-solving functions.
+                </p>
+            </div>
+
+            <!-- Human Flourishing & Creativity -->
+            <div class="card" style="
+                position: relative;
+                background: rgba(255,255,255,0.12);
+                padding: 2.2rem 2rem;
+                border-radius: 24px;
+                flex: 1 1 300px;
+                max-width: 320px;
+                text-align: center;
+                backdrop-filter: blur(4px);
+            ">
+                <div style="position: relative; margin-bottom: 1.2rem;">
+                    <img src="assets/images/photos/Dance.jpg"
+                         alt="Human Flourishing & Creativity"
+                         style="
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            border: 4px solid var(--accent);
+                         ">
+                    <svg style="
+                        position: absolute;
+                        top: -10px;
+                        left: -10px;
+                        width: 120px;
+                        height: 120px;
+                    " viewBox="0 0 120 120">
+                        <path d="M10,60 Q60,10 110,60 Q60,110 10,60"
+                              stroke="var(--accent)"
+                              stroke-width="2"
+                              fill="none"/>
+                    </svg>
+                </div>
+
+                <h3 style="color: var(--accent); margin-bottom: 0.8rem;">
+                    Human Flourishing & Creativity
+                </h3>
+
+                <p style="color: rgba(255,255,255,0.9);">
+                    Dance, mindfulness, psychophysiology, and applied research on
+                    creativity, emotion, and psychological wellbeing.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- ========================================================= -->
+<!-- THERAPY APPROACH -->
+<!-- ========================================================= -->
+<section class="section reveal"
+    style="
+        --bg: linear-gradient(135deg, #0f172a, #020617);
+        --text: #e5e7eb;
+        --accent: #22d3ee;
+        --h-size: 2.8rem;
+        --p-size: 1.1rem;
+        padding: 5rem 2rem;
+    ">
+
+    <div class="content" style="max-width: 1100px; margin: auto; text-align: center;">
+        <h2>Training/Book</h2>
+
+        <p style="max-width: 850px; margin: 2rem auto 3.5rem;">
+            My training is grounded in <strong>Cognitive Behavioral Therapy (CBT)</strong>,
+            enriched by a neuroscience-informed perspective. The focus is on understanding how
+            thoughts, emotions, and behaviors interact at both psychological and neural levels.
+        </p>
+
+        <!-- VISUAL CARDS -->
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            align-items: stretch;
+        ">
+
+            <!-- CARD 1: CBT APPROACH -->
+            <div style="
+                background: rgba(255,255,255,0.05);
+                border-radius: 28px;
+                padding: 2.5rem 2rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+                position: relative;
+                overflow: hidden;
+            ">
+
+                <!-- Decorative curve -->
+                <div style="
+                    position: absolute;
+                    top: -60px;
+                    right: -60px;
+                    width: 180px;
+                    height: 180px;
+                    background: radial-gradient(circle, var(--accent), transparent 70%);
+                    opacity: 0.25;
+                "></div>
+
+                <img src="assets/images/photos/Therapy.jpg"
+                     alt="Cognitive Behavioral Therapy"
+                     style="
+                        width: 100%;
+                        max-width: 260px;
+                        border-radius: 20px;
+                        margin-bottom: 1.5rem;
+                        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+                     ">
+
+                <h3>Cognitive Behavioral Therapy</h3>
+
+                <p style="font-size: 1rem;">
+                    CBT is a structured, evidence-based approach that helps individuals identify
+                    and modify unhelpful thought patterns and behaviors. In my work, CBT principles
+                    are applied to enhance self-awareness, improve emotional regulation, and support
+                    sustainable behavioral change.
+                </p>
+            </div>
+
+            <!-- CARD 2: BOOK -->
+            <div style="
+                background: rgba(255,255,255,0.05);
+                border-radius: 28px;
+                padding: 2.5rem 2rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+                position: relative;
+                overflow: hidden;
+            ">
+
+                <!-- Decorative curve -->
+                <div style="
+                    position: absolute;
+                    bottom: -60px;
+                    left: -60px;
+                    width: 180px;
+                    height: 180px;
+                    background: radial-gradient(circle, var(--accent), transparent 70%);
+                    opacity: 0.25;
+                "></div>
+
+                <img src="assets/images/photos/Book.jpg"
+                     alt="Brain Obesity book cover"
+                     style="
+                        width: 100%;
+                        max-width: 220px;
+                        border-radius: 18px;
+                        margin-bottom: 1.5rem;
+                        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+                     ">
+
+                <h3>Brain Obesity</h3>
+
+                <p style="font-size: 1rem;">
+                    This book translates neuroscience research into practical strategies for
+                    understanding eating behavior and obesity, integrating CBT-based strategies.
+                </p>
+
+                <a href="https://www.amazon.de/-/en/Brain-Obesity-Practical-Neuroscience-Informed-Methods/dp/1734740833"
+                   target="_blank"
+                   style="
+                        display: inline-block;
+                        margin-top: 1rem;
+                        padding: 0.6rem 1.2rem;
+                        border-radius: 999px;
+                        border: 1px solid var(--accent);
+                        color: var(--accent);
+                        text-decoration: none;
+                        font-size: 0.95rem;
+                        transition: background 0.3s ease, color 0.3s ease;
+                   "
+                   onmouseover="this.style.background='var(--accent)'; this.style.color='#020617'"
+                   onmouseout="this.style.background='transparent'; this.style.color='var(--accent)'"
+                >
+                    Buy on Amazon
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========================================================= -->
+<!-- EDUCATION -->
+<!-- ========================================================= -->
+<section class="section reveal"
+    style="
+        --bg: #0f172a;
+        --text: #e5e7eb;
+        --accent: #22d3ee;
+        --muted: #94a3b8;
+        --h-size: 2.6rem;
+        --p-size: 1.05rem;
+    ">
+
+    <div class="content" style="max-width: 850px; margin: auto;">
+        <h2 style="text-align: center; margin-bottom: 2.5rem;">Education</h2>
+
+        <div style="display: flex; flex-direction: column; gap: 1.6rem;">
+
+            <!-- Doctorate -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: baseline;">
+                    <span style="color: var(--accent); font-size: 0.95rem;">📅 10/2021 – Present</span>
+                    <strong>Doctorate, Cognitive Neuroscience</strong>
+                </div>
+                <div style="color: var(--muted); margin-left: 1.8rem;">
+                    OMEGA Lab, Department of Neurology, Max Planck Institute for Human Cognitive and Brain Sciences, Clinic for Cognitive Neurology, University of Leipzig Medical Center, Leipzig
+                </div>
+            </div>
+
+            <!-- Master -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: baseline;">
+                    <span style="color: var(--accent); font-size: 0.95rem;">📅 09/2013 – 02/2016</span>
+                    <strong>Master of Science, Clinical Psychology (Excellence Graduate)</strong>
+                </div>
+                <div style="color: var(--muted); margin-left: 1.8rem;">
+                    Department of Psychology, University of Tehran, Tehran
+                </div>
+            </div>
+
+            <!-- Bachelor -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: baseline;">
+                    <span style="color: var(--accent); font-size: 0.95rem;">📅 09/2009 – 06/2013</span>
+                    <strong>Bachelor of Science, Clinical Psychology (Excellence Graduate)</strong>
+                </div>
+                <div style="color: var(--muted); margin-left: 1.8rem;">
+                    Department of Psychology, University of Tehran, Tehran
+                </div>
+            </div>
+
+            <!-- Diploma -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: baseline;">
+                    <span style="color: var(--accent); font-size: 0.95rem;">📅 09/2005 – 06/2009</span>
+                    <strong>Diploma, Biology</strong>
+                </div>
+                <div style="color: var(--muted); margin-left: 1.8rem;">
+                    Roshangaran High School, National Organization for the Development of Exceptional Talents, Tehran
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ========================================================= -->
+<!-- HONOURS & AWARDS -->
+<!-- ========================================================= -->
+<section class="section reveal"
+    style="
+        --bg: #111827;
+        --text: #e5e7eb;
+        --accent: #fbbf24;
+        --h-size: 2.6rem;
+        --p-size: 1.05rem;
+    ">
+    <div class="content" style="max-width: 900px; margin: auto;">
+        <h2>Honours & Awards</h2>
+
+        <h3>Travel Grants</h3>
+        <ul>
+            <li>IMPRS — ECNP Congress, Barcelona, Spain (10/2023)</li>
+            <li>EASO — Winter School, Palma de Mallorca, Spain (11/2024)</li>
+            <li>SCAF — Writing Retreat, Loch Lomond, Scotland (04/2025)</li>
+            <li>EASO — Lab Exchange, Athens, Greece (07/2025)</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Doctoral Scholarship</h3>
+        <p>
+            Friedrich Naumann Foundation for Freedom Scholarship<br>
+            <em>10/2021 – present</em>
+        </p>
+    </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- SELECTED TALKS -->
+<!-- ========================================================= -->
+<section class="section reveal"
+    style="
+        --bg: linear-gradient(135deg, #0ea5e9, #22c55e);
+        --text: #022c22;
+        --accent: #064e3b;
+        --h-size: 2.7rem;
+        --p-size: 1.05rem;
+    ">
+    <div class="content">
+        <h2>Selected Talks</h2>
+        <ul style="list-style-type: disc; padding-left: 2em; margin-left: 0; text-align: left;">
+            <li>Cultural Identity and Mental Health Among Immigrants: Culture and Migration Seminar, Nürnberg, Germany (2022). Interactive seminar for scholarship holders, focusing on cross-cultural psychology and immigrant wellbeing.</li>
+            <li>How Our Brain Reacts While Encountering Food and What We Can Change About It? DGE Congress, Germany (2022). Large-scale public talk simplifying neuroscience for a lay audience.</li>
+            <li>Let’s Get Creative: British Science Festival, Coventry & Warwickshire, UK (2019). Public science festival presentation on creativity and innovation for a diverse international audience.</li>
+            <li>RehaCom Software Introduction: 11th Congress of Stroke, Iran (2019). Technical workshop for clinicians and students on rehabilitation technologies.</li>
+            <li>Why and How Cognitive Rehabilitation: 7th Basic and Clinical Neuroscience Congress, Iran (2018). Academic presentation for neuroscience and clinical researchers.</li>
+            <li>Different Methods of Cognitive Rehabilitation: Daj Center, Iran (2017). Professional training session for clinicians and graduate students on therapeutic interventions.</li>
+            <li>Cue Reactivity and Craving as a Core for Treatment: From Obesity to Addictions: 11th International Addiction Science Congress, Iran (2017). Scientific talk for researchers and clinical professionals.</li>
+            <li>Neuro-Cognitive Treatment for Obesity : INCAS, Iran (2017). Applied workshop for health professionals on cognitive approaches to obesity treatment.</li>
+            <li>Family Caregivers and Training Programs for Alzheimer’s: University of Tehran, Iran (2015). Community workshop equipping caregivers and the general public with practical tools for dementia care.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ========================================================= -->
+<!-- POSTERS -->
+<!-- ========================================================= -->
+<section class="section reveal"
+    style="
+        --bg: linear-gradient(135deg, #facc15, #f97316);
+        --text: #42210b;
+        --accent: #78350f;
+        --h-size: 2.7rem;
+        --p-size: 1.05rem;
+    ">
+    <div class="content">
+        <h2>Posters</h2>
+        <ul style="list-style-type: disc; padding-left: 2em; margin-left: 0; text-align: left;">
+            <li>Investigating the Impact of Microbiome-Changing Interventions on Food Decision-Making: MIFOOD Study Protocol. Poster presentation at the EASO Winter School, 14–16 November 2024, Spain.</li>
+            <li>Neuronal Responses to Visual Food Cues According to Weight and Hunger Status: A Systematic Review and Meta-Analysis. Poster presentation at the 36th ECNP Congress, 7–10 October 2023, Barcelona, Spain.</li>
+            <li>Aiming at Higher Reliability in Systematic Reviews: A Preregistration of Food Cue Reactivity fMRI. Poster presentation at the 12th Summer School of IMPRS NeuroCom, 26–28 June 2023, Germany.</li>
+            <li>Effects of Microbiome-Changing Interventions on Food Decision-Making and the Gut–Brain Axis in Obesity (MIFOOD). Poster presentation at the 11th Summer School of IMPRS NeuroCom, 27–29 June 2022, Germany.</li>
+            <li>Creative Mind-Wandering: Music as Incubation Phase. Poster presentation at the XXVI Conference of the International Association of Empirical Aesthetics, 1–3 September 2021, UK.</li>
+            <li>Cognitive Rehabilitation of Visual Field Deficit Due to Hypoxic-Ischemia Following an Intraventricular Neurocytoma Removal: A Single Case. Poster presentation at the MBB Symposium, 15–18 March 2021, Germany.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PUBLICATIONS -->
+<!-- ========================================================= -->
+<section class="section reveal"
+    style="
+        --bg: #0f172a;
+        --text: #e5e7eb;
+        --accent: #a5b4fc;
+        --h-size: 2.7rem;
+        --p-size: 1.05rem;
+    ">
+    <div class="content">
+        <h2>Publications</h2>
+        <ul style="list-style-type: disc; padding-left: 2em; margin-left: 0; text-align: left;">
+            <li>Christensen, J. F., Frieler, K., Vartanian, M., Khorsandi, S., Farahi, F., Yazdi, S. H., ... & Walsh, V. (2025). An enculturation-induced joy bias for emotion recognition in full-body-movement. <em>Scientific Reports, 15(1), 37163.</em></li>
+            <li>Vartanian, M., Jahanitabesh, A., Christensen, J. F., Staub, H., Jensen, D. E., Villringer, A., & Witte, A. V. (2025). Neural responses to visual food cues according to weight and hunger state: A systematic review and meta-analysis. <em>Neuroscience & Biobehavioral Reviews, 106301.</em></li>
+            <li>Abbasi Sooreshjani, M., Ghorbani, N., & Vartanian, M. (2025). Psychophysiological responses to mindful equanimity induction in virtual reality: An exploratory study. <em>Cognitive Science Research.</em></li>
+            <li>Vartanian, M., Endres, K. J., Lee, Y. T., Friedrich, S., Meemken, M. T., Schamarek, I., … Witte, A. V. (2025). Investigating the impact of microbiome-changing interventions on food decision-making: MIFOOD study protocol. <em>BMC Nutrition, 11, 8.</em></li>
+            <li>Christensen, J. F., Vartanian, M., Manias, B. C., Golestani, R., Khorsandi, S., & Frieler, K. (2024). Enculturation-acculturation screening tools for empirical aesthetics research: A proof of principle study. <em>Journal of Cognition and Culture, 24(3–4), 325–372.</em></li>
+            <li>Patterson, J. D., Merseal, H. M., Johnson, D. R., Agnoli, S., Baas, M., Baker, B. S., … Beaty, R. E., & Vartanian, M. (2023). Multilingual semantic distance: Automatic verbal creativity assessment in many languages. <em>Psychology of Aesthetics, Creativity, and the Arts, 17(4), 495.</em></li>
+            <li>Vartanian, M., Khorsandi, S., Escanero, L. S., Acedo-Carmona, C., & Christensen, J. F. (2022). Human flourishing through dance practice. In T. Chemi, E. Brattico, L. Overby Fjorback, & L. Harmat (Eds.), <em>Arts and mindfulness education for human flourishing (Routledge Series: Art, Education and Mental Health).</em></li>
+            <li>Christensen, J. F., Farahi, F., Vartanian, M., & Yazdi, S. (2022). Choice hygiene for “consumer neuroscientists”? Ethical considerations and proposals for future endeavours. <em>Frontiers in Neuroscience, 15, 612639.</em></li>
+            <li>Ghobadi-Azbari, P., Malmir, N., Vartanian, M., Mahdavifar-Khayati, R., Robatmili, S., Hadian, V., … Ekhtiari, H. (2022). Transcranial direct current stimulation to modulate brain reactivity to food cues in overweight and obese adults: Study protocol for a randomized controlled trial with fMRI (NeuroStim-Obesity). <em>Trials, 23(1), 297.</em></li>
+            <li>Ekhtiari, H., & Vartanian, M. (2021). Brain obesity: Practical neuroscience-informed methods to keep your body fit and healthy. <em>Metacognium.</em></li>
+            <li>Christensen, J. F., Vartanian, M., Sancho-Escanero, L., Khorsandi, S., Yazdi, S. H. N., Farahi, F., … Gomila, A. (2021). A practice-inspired mindset for researching the psychophysiological and medical health effects of recreational dance (dance sport). <em>Frontiers in Psychology, 11, 588948.</em></li>
+            <li>Ekhtiari, H., Rezaee, A., & Mahdavi Haji, T., Vartanian, M. (2018). My brain, overeating, and obesity: How to use our brain functions to overcome obesity. <em>Mehretan. ISBN: 978-600-9890-32-3.</em></li>
+            <li>Vartanian, M., Hatami, J., Khazaei, A., & Hadi Bahrami, E. (2016). Effectiveness of group therapy based on cognitive rehabilitation of memory and executive functioning in patients with traumatic brain injury. <em>Applied Psychological Research Quarterly, 7(2), 105–126.</em></li>
+            <li>Watson, P. J., Chen, Z., Ghorbani, N., & Vartanian, M. (2015). Religious openness hypothesis: I. Religious reflection, schemas, and orientations within religious fundamentalist and biblical foundationalist ideological surround. <em>Journal of Psychology & Christianity, 34(2).</em></li>
+            <li>Watson, P. J., Ghorbani, N., Vartanian, M., & Chen, Z. (2013). Religious openness hypothesis: II. Religious reflection, mystical experience, and religious orientations of Christians in the Islamic Republic of Iran. <em>Journal of Psychology & Christianity, 34(7), 114–124.</em></li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+
+<!-- ========================================================= -->
+<!-- CONTACT -->
+<!-- ========================================================= -->
+<section class="section footer reveal"
+    style="
+        --bg: #020617;
+        --text: #94a3b8;
+        --accent: #38bdf8;
+        --h-size: 2.3rem;
+        --p-size: 1rem;
+        height: 100vh; /* full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    ">
+    <h2>Contact</h2>
+
+    <p>meghedi.vartanian@gmail.com</p>
+
+    <div class="links" style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
+        <a href="https://scholar.google.com/citations?user=HdcxJjwAAAAJ&hl=en" target="_blank" style="color: var(--accent); text-decoration: none;">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/meghedi-vartanian-13300277" target="_blank" style="color: var(--accent); text-decoration: none;">LinkedIn</a>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+

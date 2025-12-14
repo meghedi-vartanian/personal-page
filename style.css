@@ -1,0 +1,212 @@
+/* ========================================================= */
+/* GLOBAL RESET */
+/* ========================================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: black;
+    overflow-x: hidden;
+}
+
+/* ========================================================= */
+/* SECTION SYSTEM */
+/* ========================================================= */
+.section {
+    min-height: 100vh;
+    padding: 6rem 10%;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.content {
+    max-width: 1100px;
+}
+
+.narrow {
+    max-width: 700px;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+/* ========================================================= */
+/* TYPOGRAPHY */
+/* ========================================================= */
+.section h1,
+.section h2 {
+    font-size: var(--h-size);
+    color: var(--accent);
+    margin-bottom: 2rem;
+}
+
+.section p,
+.section li {
+    font-size: var(--p-size);
+    line-height: 1.7;
+}
+
+/* ========================================================= */
+/* LINKS */
+/* ========================================================= */
+.links a {
+    color: var(--accent);
+    margin-right: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ========================================================= */
+/* GRID & CARDS */
+/* ========================================================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: rgba(0,0,0,0.25);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+}
+
+/* ========================================================= */
+/* TIMELINE */
+/* ========================================================= */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.event {
+    display: flex;
+    gap: 2rem;
+}
+
+.label {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* ========================================================= */
+/* IMAGES */
+/* ========================================================= */
+.image {
+    max-width: 100%;
+    margin-top: 3rem;
+    border-radius: 16px;
+}
+
+/* ========================================================= */
+/* ANIMATION */
+/* ========================================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================================= */
+/* HERO */
+/* ========================================================= */
+.hero {
+    text-align: center;
+}
+
+.lead {
+    opacity: 0.9;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    text-align: center;
+    opacity: 0.6;
+}
+
+/* ========================================================= */
+/* FOOTER */
+/* ========================================================= */
+.footer {
+    min-height: 70vh;
+}
+
+/* ========================================================= */
+/* PROFILE PHOTO (HERO) */
+/* ========================================================= */
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.8rem;
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    animation: floatIn 1.2s ease forwards;
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;       /* full visible height */
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fills container, crops if needed */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide-image.active {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .slideshow-container {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .slideshow-container {
+        height: 40vh;
+    }
+}
